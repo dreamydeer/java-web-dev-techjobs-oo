@@ -46,6 +46,65 @@ public class Job {
         return super.hashCode();
     }
 
+    @Override
+    public String toString() {
+        return
+            "\n" +
+            "ID: " + (
+                (
+                    Integer.toString(this.getId()) != null &&
+                    Integer.toString(this.getId()) != ""
+                ) ?
+                Integer.toString(this.getId()) :
+                "Data not available"
+            ) + "\n" +
+            "Name: " + (
+                (
+                    this.getName() != null &&
+                    this.getName() != ""
+                ) ?
+                this.getName() :
+                "Data not available"
+            ) + "\n" +
+            "Employer: " + (
+                (
+                    this.getEmployer() != null &&
+                    this.getEmployer().getValue() != null &&
+                    this.getEmployer().getValue() != ""
+                ) ?
+                this.getEmployer().getValue() :
+                "Data not available"
+            ) + "\n" +
+            "Location: " + (
+                (
+                    this.getLocation() != null &&
+                    this.getLocation().getValue() != null &&
+                    this.getLocation().getValue() != ""
+                ) ?
+                this.getLocation().getValue() :
+                "Data not available"
+            ) + "\n" +
+            "Position Type: " + (
+                (
+                    this.getPositionType() != null &&
+                    this.getPositionType().getValue() != null &&
+                    this.getPositionType().getValue() != ""
+                ) ?
+                this.getPositionType().getValue() :
+                "Data not available"
+            ) + "\n" +
+            "Core Competency: " + (
+                (
+                    this.getCoreCompetency() != null &&
+                    this.getCoreCompetency().getValue() != null &&
+                    this.getCoreCompetency().getValue() != ""
+                ) ?
+                this.getCoreCompetency().getValue() :
+                "Data not available"
+            ) + "\n"
+        ;
+    }
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
